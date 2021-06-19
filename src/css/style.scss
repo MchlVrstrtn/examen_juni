@@ -1,0 +1,310 @@
+@use "./base/mixins" as *;
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/fonts";
+@use "../icons/style.css";
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 62.5%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.container2 {
+  width: 59%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+main {
+  background-image: url("../images/trees1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .line {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 30px);
+      bottom: -43px;
+      width: 50px;
+      height: 1px;
+      background-color: $turqoise;
+    }
+  }
+  .container2 > h1 {
+    color: $white;
+    font-family: $font_playfair;
+    font-weight: 900;
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 150px;
+  }
+  .container2 > p {
+    color: $white;
+    line-height: 2.4rem;
+    font-size: 1.5rem;
+    font-family: $font_roboto;
+    font-weight: 200;
+    margin-top: 45px;
+    padding-top: 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+  .menu {
+    display: flex;
+    margin-left: auto;
+    li {
+      a {
+        margin-right: 1.7rem;
+        color: $white;
+        padding: 5px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $font_roboto;
+        font-weight: 400;
+        transition: all 300ms;
+        position: relative;
+        &:hover,
+        &.active {
+          color: $turqoise;
+        }
+        a::after {
+          content: "";
+          position: absolute;
+          left: 5px;
+          bottom: 0;
+          width: 0;
+          height: 3px;
+          background-color: transparent;
+          transition: all 300ms;
+        }
+      }
+    }
+  }
+
+  main2 {
+    background-color: #fff;
+
+    .container2 > h1 {
+      font-family: $font_playfair;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+    .container2 > h2 {
+      font-family: $font_playfair;
+      font-size: 1.4rem;
+      font-weight: 400;
+      &.line::after {
+        left: 0;
+        bottom: -15px;
+      }
+
+      section {
+        @include make-col(2, 70px);
+        .story {
+          //  @include flex(row, space-between, flex-start);
+          img {
+            width: 21%;
+            border-radius: 50%;
+          }
+          p {
+            color: $tekst;
+            line-height: 2.4rem;
+            font-size: 1.5rem;
+            font-family: $font_roboto;
+            margin-top: 45px;
+          }
+        }
+      }
+      /* section {
+        .story > p {
+          color: $tekst;
+          line-height: 2.4rem;
+          font-size: 1.5rem;
+          font-family: $font_roboto;
+          margin-top: 45px;
+        }
+      }*/
+    }
+  }
+}
+main4 {
+  background-color: #fff;
+
+  .container2 > h1 {
+    font-family: $font_playfair;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .container2 > h2 {
+    font-family: $font_playfair;
+    font-size: 1.4rem;
+    font-weight: 400;
+    &.line::after {
+      left: 0;
+      bottom: -15px;
+    }
+
+    section {
+      @include make-col(2, 70px);
+      .story {
+        //  @include flex(row, space-between, flex-start);
+        img {
+          width: 21%;
+          border-radius: 50%;
+        }
+        p {
+          color: $tekst;
+          line-height: 2.4rem;
+          font-size: 1.5rem;
+          font-family: $font_roboto;
+          margin-top: 45px;
+        }
+      }
+    }
+    /* section {
+      .story > p {
+        color: $tekst;
+        line-height: 2.4rem;
+        font-size: 1.5rem;
+        font-family: $font_roboto;
+        margin-top: 45px;
+      }
+    }*/
+  }
+}
+
+main3 {
+  background: url("../images/skyline.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  text-align: center;
+  img {
+    width: 100%;
+    position: absolute;
+  }
+  p {
+    color: white;
+    font-size: 16px;
+    font-family: $font_roboto;
+    position: relative;
+    margin-bottom: 100px;
+    padding-top: 10px;
+  }
+  .icon-play2 {
+    height: 100px;
+    color: white;
+    width: 100px;
+    position: relative;
+    margin-top: 100px;
+  }
+}
+main5 {
+  height: 100%;
+  img {
+    width: 100%;
+    position: absolute;
+  }
+  h1 {
+    color: #fff;
+    font-family: $font_playfair;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  .top {
+    margin-top: 20px;
+    p {
+      color: white;
+
+      font-family: $font_playfair;
+      font-size: 1.4rem;
+      font-weight: 700;
+      position: relative;
+      margin-bottom: 100px;
+      padding-top: 10px;
+    }
+  }
+  .card {
+    padding: 0;
+  }
+
+  .imgs {
+    margin-bottom: 100px;
+    @include make-col(4, 5px);
+    .card {
+      border: solid;
+      border-width: 0 1px;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+      position: relative;
+    }
+    p {
+      color: white;
+      font-size: 10px;
+      font-family: $font_roboto;
+      position: relative;
+    }
+  }
+
+  .line {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 30px);
+      bottom: -43px;
+      width: 50px;
+      height: 1px;
+      background-color: $turqoise;
+    }
+  }
+}
+
+main6 {
+  h1 {
+    font-family: $font_playfair;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  td {
+    width: 100% / 6;
+  }
+
+  p {
+    font-family: $font_playfair;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 100px;
+    padding-top: 10px;
+  }
+  .line {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 30px);
+      bottom: -43px;
+      width: 50px;
+      height: 1px;
+      background-color: $turqoise;
+    }
+  }
+}
